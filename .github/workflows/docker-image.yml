@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: 
+      run: |
         docker build . --file dockerfile -t gendi97/jenkins_iti:v1
         docker login -u gendi97 -p Gendi15898
         docker push gendi97/jenkins_iti:v1
